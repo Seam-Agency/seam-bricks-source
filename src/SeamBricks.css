@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Geist Pixel Square";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("./assets/GeistPixel-Square.woff2") format("woff2");
+}
+
+.seam-bricks {
+  --seam-bricks-background: #f0f0f0;
+  position: relative;
+  display: block;
+  min-width: 1px;
+  min-height: 1px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--seam-bricks-background);
+  outline: none;
+}
+
+.seam-bricks__mount,
+.seam-bricks__canvas,
+.seam-bricks__fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.seam-bricks__mount {
+  z-index: 1;
+}
+
+.seam-bricks__canvas {
+  display: block;
+  cursor: default;
+  outline: none;
+  touch-action: none;
+}
+
+.seam-bricks[data-orbit="true"] .seam-bricks__canvas {
+  cursor: grab;
+}
+
+.seam-bricks[data-orbit="true"] .seam-bricks__canvas:active {
+  cursor: grabbing;
+}
+
+.seam-bricks__canvas.is-hovering {
+  cursor: pointer;
+}
+
+.seam-bricks__fallback {
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  color: rgb(255 255 255 / 0.98);
+  background: var(--seam-bricks-background);
+}
+
+.seam-bricks__fallback-object {
+  display: flex;
+  width: min(82%, 840px);
+  min-height: 96px;
+  overflow: hidden;
+  box-shadow: 0 26px 58px rgb(80 130 220 / 0.18);
+}
+
+.seam-bricks__fallback-piece {
+  display: flex;
+  overflow: hidden;
+  min-width: 0;
+  align-items: center;
+  padding-inline: 7%;
+  background: linear-gradient(180deg, #9ad3fa, #72a6e7 54%, #6a98e1);
+  font: 400 clamp(20px, 4.3vw, 50px) / 1 "Geist Pixel Square", ui-monospace,
+    monospace;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.seam-bricks__fallback-piece[data-palette="yellow"] {
+  justify-content: center;
+  background: linear-gradient(180deg, #fff085, #fcd560 54%, #f4bc4b);
+  font-size: 42px;
+}
+
+.seam-bricks__fallback-piece[data-palette="coral"] {
+  background: linear-gradient(180deg, #ffc2aa, #ed786a 54%, #df6259);
+}
+
+.seam-bricks__fallback-piece[data-palette="violet"] {
+  background: linear-gradient(180deg, #d8bef7, #9571da 54%, #7f5dcc);
+}
+
+.seam-bricks__fallback-piece[data-palette="mint"] {
+  background: linear-gradient(180deg, #aaead8, #59bea8 54%, #47aa96);
+}
+
+.seam-bricks__fallback-piece[data-palette="rose"] {
+  background: linear-gradient(180deg, #fbb7d2, #e16f9d 54%, #d45a8c);
+}
+
+.seam-bricks[data-renderer="webgl"] .seam-bricks__fallback {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.seam-bricks:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seam-bricks *,
+  .seam-bricks *::before,
+  .seam-bricks *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

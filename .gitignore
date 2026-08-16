@@ -1,0 +1,10 @@
+node_modules/
+dist/
+site-dist/
+.vite/
+coverage/
+playwright-report/
+test-results/
+docs/.pulse-frames/
+*.tgz
+*.log
