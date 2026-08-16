@@ -8,10 +8,10 @@
   "homepage": "https://seam.tools/bricks/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Seam-Agency/seam-bricks.git"
+    "url": "git+https://github.com/Seam-Agency/seam-bricks-source.git"
   },
   "bugs": {
-    "url": "https://github.com/Seam-Agency/seam-bricks/issues"
+    "url": "https://github.com/Seam-Agency/seam-bricks-source/issues"
   },
   "keywords": [
     "react",

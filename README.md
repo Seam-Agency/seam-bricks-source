@@ -1,8 +1,8 @@
 # Seam Bricks
 
-[![CI](https://github.com/Seam-Agency/seam-bricks/actions/workflows/ci.yml/badge.svg)](https://github.com/Seam-Agency/seam-bricks/actions/workflows/ci.yml)
+[![CI](https://github.com/Seam-Agency/seam-bricks-source/actions/workflows/ci.yml/badge.svg)](https://github.com/Seam-Agency/seam-bricks-source/actions/workflows/ci.yml)
 [![Live demo](https://img.shields.io/badge/demo-seam.tools%2Fbricks-73574a.svg)](https://seam.tools/bricks/)
-[![Release](https://img.shields.io/github/v/release/Seam-Agency/seam-bricks?display_name=tag)](https://github.com/Seam-Agency/seam-bricks/releases)
+[![Release](https://img.shields.io/github/v/release/Seam-Agency/seam-bricks-source?display_name=tag)](https://github.com/Seam-Agency/seam-bricks-source/releases)
 [![MIT License](https://img.shields.io/badge/license-MIT-25272a.svg)](./LICENSE)
 
 An editable native WebGL brick system for React. Every brick is data-driven,
@@ -10,12 +10,12 @@ the geometry is real 3D, Geist Pixel labels are generated as fitted textures,
 and the renderer stops requesting frames whenever animation, camera damping,
 and resizing are idle.
 
-[**Live demo**](https://seam.tools/bricks/) · [**Release artifacts**](https://github.com/Seam-Agency/seam-bricks/releases)
+[**Live demo**](https://seam.tools/bricks/) · [**Release artifacts**](https://github.com/Seam-Agency/seam-bricks-source/releases)
 
 ## Install
 
 ```bash
-npm install https://github.com/Seam-Agency/seam-bricks/releases/latest/download/seam-bricks.tgz
+npm install https://github.com/Seam-Agency/seam-bricks-source/releases/latest/download/seam-bricks.tgz
 ```
 
 The public release tarball installs without registry credentials. For a fully
